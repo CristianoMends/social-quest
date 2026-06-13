@@ -1,10 +1,9 @@
+import Quiz from './components/Quiz'
 import BuyButton from './components/BuyButton'
 
-// Preço exibido acima do botão. Edite à vontade (ou deixe vazio '' para ocultar).
 const OLD_PRICE = 'R$ 47'
 const PRICE = 'R$ 10'
 
-// Conteúdo dos 4 níveis.
 const LEVELS = [
   {
     n: 'Nível 1',
@@ -50,23 +49,12 @@ const NOT_FOR_YOU = [
 ]
 
 export default function Page() {
-  // Link do checkout vindo do ambiente (.env.local). Fallback seguro.
   const checkoutUrl = process.env.CHECKOUT_URL || '#'
 
   return (
     <main>
-      {/* ===== HERO (sem botão — público frio entra entendendo primeiro) ===== */}
-      <section className="hero">
-        <div className="container">
-          <span className="eyebrow">Guia gamificado · 30 dias</span>
-          <h1>Você não é antissocial.<br />Você só está no Nível 1.</h1>
-          <p className="lede">
-            Um método de 30 dias para vencer o medo de falar com gente, puxar conversa
-            e fazer conexões — sem virar outra pessoa.
-          </p>
-          <span className="scroll-cue">role e entenda como funciona ↓</span>
-        </div>
-      </section>
+      {/* ===== QUIZ (substitui o hero) ===== */}
+      <Quiz checkoutUrl={checkoutUrl} />
 
       {/* ===== A DOR ===== */}
       <section className="section">
@@ -176,7 +164,7 @@ export default function Page() {
         </div>
       </section>
 
-      {/* ===== CTA FINAL (o único botão da página) ===== */}
+      {/* ===== CTA FINAL ===== */}
       <section className="cta">
         <div className="container">
           <h2 className="cta__title">Comece sua primeira missão hoje</h2>
