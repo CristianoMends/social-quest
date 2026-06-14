@@ -1,8 +1,9 @@
 import Quiz from './components/Quiz'
 import BuyButton from './components/BuyButton'
+import GameScreenshots from './components/GameScreenshots'
 
 const OLD_PRICE = 'R$ 47'
-const PRICE = 'R$ 10'
+const PRICE = 'R$ 27'
 
 const LEVELS = [
   {
@@ -53,6 +54,16 @@ export default function Page() {
 
   return (
     <main>
+      {/* ===== HEADER / NAV ===== */}
+      <header className="lp-header">
+        <div className="container lp-header__inner">
+          <span className="lp-header__logo">⚔️ Social Quest</span>
+          <a href="/game" className="lp-header__play-btn">
+            Jogar 🎮
+          </a>
+        </div>
+      </header>
+
       {/* ===== QUIZ (substitui o hero) ===== */}
       <Quiz checkoutUrl={checkoutUrl} />
 
@@ -114,6 +125,53 @@ export default function Page() {
         </div>
       </section>
 
+      {/* ===== PLATFORM PREVIEW ===== */}
+      <GameScreenshots />
+
+      {/* ===== TUDO O QUE VOCÊ LEVA ===== */}
+      <section className="section section--tint">
+        <div className="container">
+          <h2 style={{ textAlign: 'center', marginBottom: '36px' }}>
+            Tudo o que você vai receber na compra:
+          </h2>
+          <div className="bundle-grid">
+            <div className="bundle-card">
+              <span className="bundle-card__badge">Incluso</span>
+              <span className="bundle-card__icon">📖</span>
+              <h3>Ebook Guia Social Quest</h3>
+              <p>
+                O manual passo a passo de 30 dias que detalha a psicologia prática por
+                trás de cada missão, com exemplos de conversas para o dia a dia.
+              </p>
+            </div>
+
+            <div className="bundle-card bundle-card--highlight">
+              <span className="bundle-card__badge" style={{ background: '#22d3ee', color: '#0a0a1e', borderColor: '#22d3ee' }}>
+                Plataforma
+              </span>
+              <span className="bundle-card__icon">🎮</span>
+              <h3>Acesso ao Web App do Game</h3>
+              <p>
+                Área de membros gamificada para você marcar suas missões diárias como concluídas,
+                ouvir os áudios explicativos de cada dia e ver seu nível e XP subirem.
+              </p>
+            </div>
+
+            <div className="bundle-card">
+              <span className="bundle-card__badge" style={{ background: '#c084fc', color: '#fff', borderColor: '#c084fc' }}>
+                Bônus
+              </span>
+              <span className="bundle-card__icon">🔥</span>
+              <h3>100 Falas Pra Quebrar o Gelo</h3>
+              <p>
+                Um bônus exclusivo com 100 abridores de conversa práticos e testados
+                para você usar na academia, trabalho, faculdade ou festas.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ===== BENEFÍCIOS ===== */}
       <section className="section section--tint">
         <div className="container">
@@ -172,6 +230,10 @@ export default function Page() {
             30 dias. Uma missão por dia. Do primeiro "bom dia" até manter uma conversa
             de verdade.
           </p>
+
+          <div className="cta__bundle">
+            <strong>O que você leva:</strong> Ebook Guia + Acesso Completo ao Web App do Jogo + Bônus "100 Falas Pra Quebrar o Gelo"
+          </div>
 
           {PRICE && (
             <div className="cta__pricing">

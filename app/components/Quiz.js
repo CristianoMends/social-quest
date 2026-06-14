@@ -175,9 +175,12 @@ export default function Quiz({ checkoutUrl }) {
             </div>
 
             <div className="quiz-result__cta">
+              <div className="quiz-result__bundle">
+                🎁 <strong>Você leva tudo isso:</strong> Ebook Guia + Acesso Completo ao Game + Bônus "100 Falas Pra Quebrar o Gelo"
+              </div>
               <div className="quiz-result__pricing">
                 <span className="quiz-result__price-old">R$ 47</span>
-                <span className="quiz-result__price">R$ 10</span>
+                <span className="quiz-result__price">R$ 27</span>
               </div>
               <BuyButton href={checkoutUrl}>{result.cta}</BuyButton>
               <p className="quiz-result__reassure">Acesso imediato · Garantia de 7 dias</p>

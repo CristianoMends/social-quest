@@ -1,0 +1,46 @@
+export const MISSIONS = [
+  { dia: 1,  nivel: 1, titulo: 'Contatos Visuais',          tasks: ['Contato Visual 1', 'Contato Visual 2', 'Contato Visual 3'] },
+  { dia: 2,  nivel: 1, titulo: 'Cumprimentos em Movimento',  tasks: ['Cumprimento 1', 'Cumprimento 2', 'Cumprimento 3'] },
+  { dia: 3,  nivel: 1, titulo: 'Figurinha Carimbada',        tasks: ['Cumprimentar conhecido 1x'] },
+  { dia: 4,  nivel: 1, titulo: 'Regra dos 3 Segundos',       tasks: ['Agir em 3s 1x'] },
+  { dia: 5,  nivel: 1, titulo: 'Volume Social',              tasks: ['Interação 1', 'Interação 2', 'Interação 3', 'Interação 4', 'Interação 5'] },
+  { dia: 6,  nivel: 1, titulo: 'O Grupo',                    tasks: ['Cumprimentar um grupo 1x'] },
+  { dia: 7,  nivel: 1, titulo: 'Modo Livre (Nível 1)',       tasks: ['Farmar livremente 1x'] },
+  { dia: 8,  nivel: 2, titulo: 'Pergunta Neutra',            tasks: ['Fazer 1 pergunta de ambiente'] },
+  { dia: 9,  nivel: 2, titulo: 'Micro-observação',           tasks: ['Fazer 1 observação compartilhada'] },
+  { dia: 10, nivel: 2, titulo: 'Favor Mínimo',               tasks: ['Pedir 1 favor rápido'] },
+  { dia: 11, nivel: 2, titulo: 'Combo Simples',              tasks: ['Pergunta + Valeu + Sorriso'] },
+  { dia: 12, nivel: 2, titulo: 'Consistência de Fuga',       tasks: ['Interação de 10s 1', 'Interação de 10s 2', 'Interação de 10s 3'] },
+  { dia: 13, nivel: 2, titulo: 'Repetição',                  tasks: ['Repetir interação com a mesma pessoa'] },
+  { dia: 14, nivel: 2, titulo: 'Modo Livre (Nível 2)',       tasks: ['Interagir com rota de fuga 1x'] },
+  { dia: 15, nivel: 3, titulo: 'Elogio de Técnica',          tasks: ['Fazer 1 elogio específico'] },
+  { dia: 16, nivel: 3, titulo: 'Elogio de Consistência',     tasks: ['Elogiar disciplina 1x'] },
+  { dia: 17, nivel: 3, titulo: 'Combo Matador',              tasks: ['Elogio + Pergunta de curiosidade'] },
+  { dia: 18, nivel: 3, titulo: 'Os Invisíveis',              tasks: ['Elogiar quem ninguém elogia 1x'] },
+  { dia: 19, nivel: 3, titulo: 'Papo de Colega',             tasks: ['Usar o combo com colega 1x'] },
+  { dia: 20, nivel: 3, titulo: 'Mestre dos Elogios',         tasks: ['Elogio Contextual 1', 'Elogio Contextual 2'] },
+  { dia: 21, nivel: 3, titulo: 'Modo Livre (Nível 3)',       tasks: ['Praticar elogios livremente'] },
+  { dia: 22, nivel: 4, titulo: 'O Trailer',                  tasks: ['Contar o trailer do hobby 1x'] },
+  { dia: 23, nivel: 4, titulo: 'O Perrengue',                tasks: ['Contar um perrengue 1x'] },
+  { dia: 24, nivel: 4, titulo: 'Devolve a Bola',             tasks: ['Falar de si + Perguntar de volta'] },
+  { dia: 25, nivel: 4, titulo: 'A Analogia',                 tasks: ['Explicar paixão com analogia 1x'] },
+  { dia: 26, nivel: 4, titulo: 'Combo Narrativo',            tasks: ['Trailer + Perrengue + Pergunta'] },
+  { dia: 27, nivel: 4, titulo: 'Masterclass',                tasks: ['Puxar papo usando os 4 níveis'] },
+  { dia: 28, nivel: 4, titulo: 'Resistência',                tasks: ['Manter conversa por 2 minutos'] },
+  { dia: 29, nivel: 4, titulo: 'O Convite',                  tasks: ['Fazer 1 convite mínimo'] },
+  { dia: 30, nivel: 4, titulo: 'Zerou o Jogo',               tasks: ['Comemorar a vitória'] },
+]
+
+export const LEVEL_CLR = {
+  1: '#22d3ee',
+  2: '#4ade80',
+  3: '#fbbf24',
+  4: '#c084fc',
+}
+
+export const LEVEL_LABEL = {
+  1: 'Contato Indireto',
+  2: 'Rota de Fuga',
+  3: 'Elogio Contextual',
+  4: 'Seu Universo',
+}
