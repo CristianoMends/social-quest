@@ -2,10 +2,10 @@ import { NextResponse } from 'next/server'
 import { getDb } from '@/app/lib/db'
 
 const APPROVED_EVENTS = new Set([
-  'order.approved',
-  'order.complete',
-  'order.completed',
-  'sale.approved',
+  'order_approved',
+  'order_complete',
+  'order_completed',
+  'sale_approved',
 ])
 
 export async function POST(req) {
@@ -29,18 +29,19 @@ export async function POST(req) {
 
   console.log('[kiwify] payload:', JSON.stringify(body, null, 2))
 
-  if (!APPROVED_EVENTS.has(body?.type)) {
-    console.log('[kiwify] evento ignorado:', body?.type)
+  const eventType = body?.webhook_event_type ?? body?.type
+  if (!APPROVED_EVENTS.has(eventType)) {
+    console.log('[kiwify] evento ignorado:', eventType)
     return NextResponse.json({ ok: true, ignored: true })
   }
 
-  const email = body?.data?.customer?.email || body?.customer?.email
+  const email = body?.Customer?.email || body?.customer?.email || body?.data?.customer?.email
   if (!email) {
     console.error('[kiwify] email não encontrado no payload')
     return NextResponse.json({ error: 'No email in payload' }, { status: 400 })
   }
 
-  const orderId = body?.data?.order_id || body?.order_id || null
+  const orderId = body?.order_id || body?.data?.order_id || null
   console.log('[kiwify] salvando compra — email:', email, '| orderId:', orderId)
 
   const sql = getDb()
